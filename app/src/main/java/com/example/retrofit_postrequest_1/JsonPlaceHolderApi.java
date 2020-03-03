@@ -3,6 +3,7 @@ package com.example.retrofit_postrequest_1;
 import java.util.List;
 import java.util.Map;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
@@ -38,7 +39,7 @@ public interface JsonPlaceHolderApi {
 
     @FormUrlEncoded
     @POST("login")
-    Call<Post> createPost(
+    Call<ResponseBody> createPost(
             @Field("username") String username,
             @Field("password") String password
 
